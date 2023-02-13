@@ -1,9 +1,11 @@
 package woo.woospring.repository;
 
+import org.springframework.stereotype.Repository;
 import woo.woospring.domain.Member;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public interface MemberRepository {
     Member save(Member member);
