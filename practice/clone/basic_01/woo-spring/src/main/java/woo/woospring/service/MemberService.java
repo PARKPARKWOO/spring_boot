@@ -2,6 +2,7 @@ package woo.woospring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import woo.woospring.domain.Member;
 import woo.woospring.repository.MemberRepository;
 import woo.woospring.repository.MemoryMemberRepository;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 //@Service
+@Transactional // jpa 할때 해야함(현재는 회원가입 기능에만) 저장할때나 변경할때
 public class MemberService {
     private final MemberRepository memberRepository;
 
