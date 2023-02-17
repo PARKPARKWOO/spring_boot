@@ -3,6 +3,7 @@ package woo.woospring;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import woo.woospring.aop.TimeTraceAop;
 import woo.woospring.repository.JdbcTemplateMemberRepository;
 import woo.woospring.repository.JpaMemberRepository;
 import woo.woospring.repository.MemberRepository;
@@ -45,6 +46,7 @@ public class springConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
 
     // memberRepository 를 service 에 등록 repository 는 인터페이스 이기때문에 구현체(memorymember)로 등록
 //    @Bean
